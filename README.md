@@ -15,6 +15,9 @@ We would be importing csv file with certain constraints and would be reading the
 
 ## Tools and Technologies used for the task
 Python Language
+
 Windows Operating System 
+
 Blockchain 
+
 Data Mining
