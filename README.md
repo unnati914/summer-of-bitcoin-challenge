@@ -31,7 +31,6 @@ Python Language
 
 Windows Operating System 
 
-Blockchain 
 
 Jupyter Notebook
 
