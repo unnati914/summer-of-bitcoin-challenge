@@ -11,7 +11,12 @@ Hashing is the process of mapping digital data of any arbitrary size to data of 
 There is a thing which is called ledger and in that there are different blocks which are forming a chain such as linked lists. There is a pointer in the each block which points to next block. 
 
 ## Project Understanding (NAIVE APPROACH)
-We would be importing csv file with certain constraints and would be reading the data in the file in the given format. We would be sorting fee column and converting it to numpy array. We would be using greedy algorithm (Dynamic Programming) and will be using fractional knapsack problem for this. In order to get max value,we would be dividing fee by txids and would be returning txids with usage of given constraints
+We would be importing csv file with certain constraints and would be reading the data in the file in the given format. We would be sorting fee column and converting it to numpy array. This is a three step process for this project
+1. Sort the fee column 
+ 
+2. Store the ids until the cumulative weight doesn't exceed the limit.
+
+3. When creating the block file we must keep track of parent that it should be placed above the current I'd.
 
 ## Tools and Technologies used for the task
 Python Language
@@ -20,6 +25,5 @@ Windows Operating System
 
 Blockchain 
 
-Dynamic Programming
+Sorting
 
-Greedy Algorithm
