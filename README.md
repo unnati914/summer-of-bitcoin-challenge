@@ -18,6 +18,8 @@ We would be importing csv file with certain constraints and would be reading the
 
 3. When creating the block file we must keep track of parent that it should be placed above the current I'd.
 
+Second approach to this problem could be fractional knapsack problem or algorithm
+
 ## Tools and Technologies used for the task
 Python Language
 
