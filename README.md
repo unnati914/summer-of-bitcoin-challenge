@@ -3,20 +3,26 @@ BitCoin can be considered as a type of cryptocurrency. It was invented in 2009..
 
 
 
-## Hashing Algorithm 
-Hashing is the process of mapping digital data of any arbitrary size to data of a fixed size. In simpler words, hashing is a process of taking some information that is readable and making something that makes no sense at all.In this task, the input file that has been given is in the form of hashes.If you take a look at the databases, we will have a limited (but huge) number of possible HASH values, simply because our HASH length is limited.If you understand that the hashing algorithm adheres to the rule where even the smallest change in input data must produce significant difference in output.
+## Problem Statement
+
+ 1. Read a file mempool.csv, with the format:   txid , fee , weight , parent_txids
+
+ 2. We need to output a block of transaction id's which should be less 4000000 (i.e. keep a track of weight)  
+
+3. Condition for a block is transactions can be included only if it's parent transactions have been included before !
 
 
 ## Understanding Blocks
 There is a thing which is called ledger and in that there are different blocks which are forming a chain such as linked lists. There is a pointer in the each block which points to next block. 
 
 ## Project Understanding (NAIVE APPROACH)
-We would be importing csv file with certain constraints and would be reading the data in the file in the given format. We would be sorting fee column and converting it to numpy array. This is a three step process for this project
-1. Sort the fee column 
- 
-2. Store the ids until the cumulative weight doesn't exceed the limit.
 
-3. When creating the block file we must keep track of parent that it should be placed above the current I'd.
+1. Read files using pandas module in python & sort the dataframe maximising the fee & minimising the weight.
+
+2. Check for parent_txid's
+
+3. Use global variables - highest_weight = 4000000 & minimum_weight & check whether the total weight of transactions in a block must not exceed 4,000,000 weight.
+
 
 Second approach to this problem could be fractional knapsack problem or algorithm
 
@@ -27,5 +33,21 @@ Windows Operating System
 
 Blockchain 
 
-Sorting
+Jupyter Notebook
+
+## Description of files for this repo
+
+  sb_README.pdf : Problem Statement
+
+  block_sample.txt : Sample output of Block Transacctions.
+
+  Summer of BitCoin Challenge.ipynb : The Jupyter Notebook containing all the functions & code.
+
+  Main.py : Source Code for the problem
+
+  mempool.csv : Input Dataset for the mempool 
+  
+  block.txt : output containing Block Transactions.
+  
+  
 
